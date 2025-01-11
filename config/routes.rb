@@ -1,5 +1,6 @@
 
 Rails.application.routes.draw do
+  get "home/index"
   resource :session
   resources :passwords, param: :token
   resources :products
@@ -7,5 +8,7 @@ Rails.application.routes.draw do
     resources :subscribers, only: [ :create ]
   end
   resource :unsubscribe, only: [ :show ]
-  root "products#index"
+   get "sign_up", to: "users#new"
+  post "users", to: "users#create"
+  root "home#index"
 end

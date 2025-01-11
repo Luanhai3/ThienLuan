@@ -27,6 +27,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
+gem 'bcrypt', '~> 3.1.7'
+gem 'pg', '1.5.0'  # Or try another stable version like 1.4.0 or 1.5.3
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
